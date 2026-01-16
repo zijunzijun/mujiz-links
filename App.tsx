@@ -77,6 +77,8 @@ const App: React.FC = () => {
             <footer className="mt-12 text-xs text-center opacity-50 font-light">
                 © Mujiz.Today
             </footer>
+
+            <iframe src="https://www.trip.com/partners/ad/S10443673?Allianceid=7719475&SID=289830829&trip_sub1=mujiz.today" style={{width:'100%', height:'400px', border:'none', overflow: 'hidden'}} id="S10443673"></iframe>
         </div>
       </div>
     </div>
