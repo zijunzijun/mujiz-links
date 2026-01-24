@@ -3,7 +3,7 @@ import { UserProfile, LinkItem, ThemeConfig } from './types';
 export const INITIAL_PROFILE: UserProfile = {
   name: 'Mujiz.Today',
   bio: '做有營養的內容 ✨\n如果喜歡我創作的內容，\n歡迎請我喝杯咖啡。🧋',
-  avatarUrl: 'https://scontent.fpen1-1.fna.fbcdn.net/v/t39.30808-6/398663292_122134989938018904_6206254094588325684_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=iAnxA3SnpLsQ7kNvwHs8fS9&_nc_oc=AdnaL_JAex7nKCdLERn2KVyB_YR9Nr6OWQ-6X4XxVa4qRnarRutLqJDTHpD44mzbmcBAk0uOYEmp58u8kM5oXsYY&_nc_zt=23&_nc_ht=scontent.fpen1-1.fna&_nc_gid=9V2bnHQkS8asvHAPNAUEzg&oh=00_AfphLX70N4SsfaXqKL7VoaNxh0n2Q_ztu6_kkMgaz86KCg&oe=696AB5B0',
+  avatarUrl: 'https://zalcgxyjwlfkrgwydngc.supabase.co/storage/v1/object/public/assets/branding/avatar-mujiz-today.jpg',
   theme: 'light',
 };
 
