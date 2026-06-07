@@ -2,8 +2,13 @@ import React from 'react';
 import * as Icons from 'lucide-react';
 import { INITIAL_LINKS, INITIAL_PROFILE, THEMES } from './constants';
 
-// Helper to resolve icon string to component
+// Helper to resolve icon string to component or image URL
 const IconResolver = ({ name, className }: { name: string; className?: string }) => {
+  if (name && (name.startsWith('http://') || name.startsWith('https://') || name.startsWith('/'))) {
+    // Make image icons slightly larger (w-8 h-8 / 32px) for better visibility
+    const imgClassName = className ? className.replace('w-5 h-5', 'w-8 h-8') : 'w-8 h-8';
+    return <img src={name} alt="" className={`${imgClassName} object-contain rounded-sm`} />;
+  }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const LucideIcon = (Icons as any)[name] || Icons.Link;
   return <LucideIcon className={className} />;
@@ -54,7 +59,7 @@ const App: React.FC = () => {
                   ${theme.buttonHover}
                 `}
               >
-                <span className="absolute left-6 opacity-70">
+                <span className="absolute left-6 top-1/2 -translate-y-1/2 opacity-70">
                    <IconResolver name={link.icon || 'Link'} className="w-5 h-5" />
                 </span>
                 <span>{link.title}</span>

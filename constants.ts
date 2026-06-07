@@ -9,11 +9,11 @@ export const INITIAL_PROFILE: UserProfile = {
 
 export const INITIAL_LINKS: LinkItem[] = [
   {
-    id: '1',
-    title: '請我喝杯咖啡',
-    url: 'https://buymeacoffee.com/mujiz.today',
+    id: '7',
+    title: 'AorB | 信用卡對比工具',
+    url: 'https://aorb.today/',
     isActive: true,
-    icon: 'Coffee'
+    icon: 'https://aorb.today/apple-icon.png'
   },
   {
     id: '2',
@@ -49,6 +49,13 @@ export const INITIAL_LINKS: LinkItem[] = [
     url: 'https://parking.mujiz.today/',
     isActive: true,
     icon: 'SquareParking'
+  },
+  {
+    id: '1',
+    title: '請我喝杯咖啡',
+    url: 'https://buymeacoffee.com/mujiz.today',
+    isActive: true,
+    icon: 'Coffee'
   }
 ];
 
