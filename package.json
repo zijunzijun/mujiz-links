@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "portal": "node scripts/portal.mjs",
+    "test:portal": "node --test tests/portal.test.mjs tests/git-publish.test.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.344.0",

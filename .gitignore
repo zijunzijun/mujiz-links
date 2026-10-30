@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local content history and atomic saves
+.portal-backups/
+.portal-*.tmp

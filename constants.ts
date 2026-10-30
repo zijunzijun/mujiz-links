@@ -1,63 +1,10 @@
-import { UserProfile, LinkItem, ThemeConfig } from './types';
+import { SiteContent, ThemeConfig } from './types';
+import content from './content.json';
 
-export const INITIAL_PROFILE: UserProfile = {
-  name: 'Mujiz.Today',
-  bio: '做有營養的內容 ✨\n如果喜歡我創作的內容，\n歡迎請我喝杯咖啡。🧋',
-  avatarUrl: 'https://zalcgxyjwlfkrgwydngc.supabase.co/storage/v1/object/public/assets/branding/avatar-mujiz-today.jpg',
-  theme: 'light',
-};
-
-export const INITIAL_LINKS: LinkItem[] = [
-  {
-    id: '7',
-    title: 'AorB | 信用卡對比工具',
-    url: 'https://aorb.today/',
-    isActive: true,
-    icon: 'https://aorb.today/apple-icon.png'
-  },
-  {
-    id: '2',
-    title: 'Instagram（日常story轟炸）',
-    url: 'https://www.instagram.com/mujiz.today',
-    isActive: true,
-    icon: 'Instagram'
-  },
-  {
-    id: '3',
-    title: 'Facebook（長篇內容發布）',
-    url: 'https://www.facebook.com/mujiz.today/',
-    isActive: true,
-    icon: 'Facebook'
-  },
-  {
-    id: '4',
-    title: '小紅書（長篇內容發布）',
-    url: 'https://xhslink.com/m/7YHroR60gFS',
-    isActive: true,
-    icon: 'BookMarked'
-  },
-  {
-    id: '5',
-    title: '小紅書（生活好物日常分享）',
-    url: 'https://xhslink.com/m/7YHroR60gFS',
-    isActive: true,
-    icon: 'BookMarked'
-  },
-  {
-    id: '6',
-    title: '馬來西亞機場停車費計算器小工具',
-    url: 'https://parking.mujiz.today/',
-    isActive: true,
-    icon: 'SquareParking'
-  },
-  {
-    id: '1',
-    title: '請我喝杯咖啡',
-    url: 'https://buymeacoffee.com/mujiz.today',
-    isActive: true,
-    icon: 'Coffee'
-  }
-];
+export const SITE_CONTENT = content as SiteContent;
+export const INITIAL_PROFILE = SITE_CONTENT.profile;
+export const INITIAL_LINKS = SITE_CONTENT.links;
+export const PROMO_BANNERS = SITE_CONTENT.banners;
 
 export const THEMES: Record<string, ThemeConfig> = {
   light: {

@@ -1,0 +1,17 @@
+.promo-banners { width: 100%; margin-bottom: 12px; }
+.promo-viewport { overflow: hidden; border-radius: 4px; background: #edf1f6; touch-action: pan-y pinch-zoom; }
+.promo-draggable { cursor: grab; user-select: none; -webkit-user-select: none; }
+.promo-draggable .promo-slide { cursor: inherit; }
+.promo-viewport.is-dragging { cursor: grabbing; }
+.promo-track { display: flex; transition: transform 480ms cubic-bezier(.22, .68, .25, 1); will-change: transform; }
+.promo-slide { display: block; flex: 0 0 100%; min-width: 0; }
+.promo-slide:focus-visible { outline: 3px solid #356bc4; outline-offset: -3px; }
+.promo-banner-image { display: block; width: 100%; aspect-ratio: 1200 / 630; object-fit: contain; -webkit-user-drag: none; }
+.promo-dots { display: flex; flex-wrap: wrap; justify-content: center; margin-top: 2px; }
+.promo-dot { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 20px; border: 0; border-radius: 999px; background: transparent; color: inherit; cursor: pointer; }
+.promo-dot:hover span { opacity: .65; }
+.promo-dot:focus-visible { outline: none; }
+.promo-dot:focus-visible span { outline: 2px solid #356bc4; outline-offset: 3px; }
+.promo-dot span { width: 6px; height: 6px; border-radius: 999px; background: currentColor; opacity: .25; transition: width 180ms ease; }
+.promo-dot[aria-current] span { width: 20px; opacity: .8; }
+@media (prefers-reduced-motion: reduce) { .promo-dot span, .promo-track { transition: none; } }

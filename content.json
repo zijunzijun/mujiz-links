@@ -1,0 +1,145 @@
+{
+  "profile": {
+    "name": "Mujiz.Today",
+    "bio": "做有營養的內容 ✨\n如果喜歡我創作的內容，\n歡迎點擊我的推廣連結，請我喝杯咖啡。🧋",
+    "avatarUrl": "https://zalcgxyjwlfkrgwydngc.supabase.co/storage/v1/object/public/assets/branding/avatar-mujiz-today.jpg",
+    "theme": "light",
+    "nameEn": "Mujiz.Today",
+    "bioEn": "Just sharing what I find useful ✨\nEnjoy my content? Using my affiliate links is a simple way to support what I do. 🧋"
+  },
+  "links": [
+    {
+      "id": "7",
+      "title": "AorB | 信用卡對比工具",
+      "titleEn": "AorB | Credit Card Comparison",
+      "url": "https://aorb.today/",
+      "icon": "https://aorb.today/apple-icon.png",
+      "isActive": true
+    },
+    {
+      "id": "3",
+      "title": "Facebook（長篇內容發布）",
+      "titleEn": "Facebook（中文）",
+      "url": "https://www.facebook.com/mujiz.today/",
+      "icon": "Facebook",
+      "isActive": true
+    },
+    {
+      "id": "2",
+      "title": "Instagram（日常story轟炸）",
+      "titleEn": "Instagram（中文）",
+      "url": "https://www.instagram.com/mujiz.today",
+      "icon": "Instagram",
+      "isActive": true
+    },
+    {
+      "id": "9981f3ae-8fb6-4ee5-ace7-989e4a4030c9",
+      "title": "Threads (英文)",
+      "titleEn": "Threads (EN)",
+      "url": "https://www.threads.com/@mujiz.today",
+      "icon": "https://assets.aorb.today/images/icons/icon-sns-threads.svg",
+      "isActive": true
+    },
+    {
+      "id": "4",
+      "title": "小紅書（長篇內容發布）",
+      "titleEn": "Xiaohongshu（中文）",
+      "url": "https://xhslink.com/m/7YHroR60gFS",
+      "icon": "BookMarked",
+      "isActive": true
+    },
+    {
+      "id": "5",
+      "title": "小紅書（生活好物日常分享）",
+      "titleEn": "Xiaohongshu | Everyday Finds",
+      "url": "https://xhslink.com/m/7YHroR60gFS",
+      "icon": "BookMarked",
+      "isActive": true
+    },
+    {
+      "id": "341d8cbd-7b55-458d-96bf-aa4c2c2dfb1f",
+      "type": "heading",
+      "title": "我的小工具",
+      "titleEn": "Tools build by me",
+      "isActive": true
+    },
+    {
+      "id": "6",
+      "title": "馬來西亞機場停車費計算器小工具",
+      "titleEn": "Malaysia Airport Parking Calculator",
+      "url": "https://parking.mujiz.today/",
+      "icon": "SquareParking",
+      "isActive": true
+    },
+    {
+      "id": "6-2",
+      "title": "多匯率轉換小工具",
+      "titleEn": "Multi Currency Converter",
+      "url": "https://rates.mujiz.today/",
+      "icon": "https://assets.aorb.today/images/icons/icon-parking.svg",
+      "isActive": true
+    },
+    {
+      "id": "ee3f69ef-a912-441f-8e24-02407c5edc69",
+      "type": "heading",
+      "title": "Mujiz的推廣連結",
+      "titleEn": "My Referral Links",
+      "isActive": true
+    },
+    {
+      "id": "1",
+      "title": "請我喝杯咖啡",
+      "titleEn": "Buy Me a Coffee",
+      "url": "https://buymeacoffee.com/mujiz.today",
+      "icon": "Coffee",
+      "isActive": true
+    },
+    {
+      "id": "48c59316-97bf-4422-88ed-87a4a4233899",
+      "title": "TNG Visa Travel Card 推廣連結",
+      "titleEn": "TNG Visa Travel Card Referral Link",
+      "url": "https://visit.tngdigital.com.my/webView?url=https%3A%2F%2Flinks.tngdigital.com.my%2Fpayment%2FEyh4xfps",
+      "icon": "Link",
+      "imageUrl": "https://assets.mujiz.today/banner/referral/tng-visa-travel-card.webp",
+      "imageUrlEn": "https://assets.mujiz.today/banner/referral/tng-visa-travel-card-en.webp",
+      "isActive": true
+    }
+  ],
+  "banners": [
+    {
+      "id": "aorb",
+      "imageUrl": "https://assets.aorb.today/og-image/og-image.png",
+      "imageAlt": "AorB 信用卡對比工具（示意圖片）",
+      "url": "https://aorb.today/",
+      "imageAltEn": "AorB | Credit Card Comparison",
+      "isActive": true
+    },
+    {
+      "id": "aorb-2",
+      "imageUrl": "https://assets.aorb.today/og-image/og-image-cashback.png",
+      "imageAlt": "AorB 信用卡對比工具",
+      "url": "https://aorb.today/cards/cashback-credit-cards",
+      "imageAltEn": "Best Cashback Credit Cards in Malaysia 2026 | AorB",
+      "isActive": true
+    },
+    {
+      "id": "7873c25f-a3cf-475e-afc2-5e1c6c7334bd",
+      "imageUrl": "https://assets.aorb.today/og-image/og-image-airmile.png",
+      "imageAlt": "Best Air Miles Credit Cards in Malaysia 2026 | AorB",
+      "url": "https://aorb.today/cards/air-miles-credit-cards",
+      "isActive": true
+    },
+    {
+      "id": "851d8bd8-0b52-4925-9e83-328b362fdd78",
+      "imageUrl": "https://assets.aorb.today/og-image/og-image-lounge.png",
+      "imageAlt": "Best Airport Lounges Credit Cards in Malaysia 2026 | AorB",
+      "url": "https://aorb.today/cards/airport-lounge-credit-cards",
+      "isActive": true
+    }
+  ],
+  "socials": {
+    "instagram": "https://www.instagram.com/mujiz.today",
+    "facebook": "https://www.facebook.com/mujiz.today",
+    "email": "mujiz.today@gmail.com.com"
+  }
+}

@@ -1,20 +1,65 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Mujiz.Today
 
-# Run and deploy your AI Studio app
+靜態連結頁與本機內容管理 Portal。
 
-This contains everything you need to run your app locally.
+## 使用 Portal
 
-View your app in AI Studio: https://ai.studio/apps/drive/1MYWchyuEMruBpqiRKV5sEg32J1GUwTKj
+1. 執行 `npm install`（初次使用）。
+2. 執行 `npm run portal`。
+3. 開啟 http://127.0.0.1:5174/portal 。
+4. 編輯個人資料、連結、Banner 與頁尾社群，右側會即時預覽草稿。
+5. 點「儲存變更」寫入本地 `content.json`。
 
-## Run Locally
+支援新增、修改、隱藏、刪除（可復原最後一次）、把手拖曳排序及上下移動。未儲存時離開會提醒；重新載入可捨棄草稿。若其他視窗或編輯器已改過檔案，會拒絕覆蓋，請先另行記錄草稿後重新載入。
 
-**Prerequisites:**  Node.js
+## 圖片與輪播
 
+Banner 建議 **1200 × 630（40:21）**。上傳 PNG、JPG、WebP、GIF（最大 8 MB），或填寫 HTTPS 圖片網址。圖片保存在 `public/uploads/`，資料內使用 `/uploads/…` 路徑。上傳會立即建立檔案，按儲存才會套用到內容；不會自動刪除未使用的圖片。
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+圖片說明僅供螢幕閱讀器使用，不會疊加在圖片上。一張固定顯示，多張每 5 秒由左往右滑動切換，可用圓點、鍵盤、滑鼠拖曳或手機滑動。滑鼠停留或焦點在輪播內時暫停。
+
+## 本地檔案與備份
+
+- `content.json`：個人資料、連結、Banner、社群入口；網站直接讀取此檔案。
+- `public/uploads/`：上傳圖片，應隨專案一起提交。
+- `.portal-backups/`：每次儲存前備份原始內容，保留最近 20 次，不提交 Git。需還原時，把選定備份複製回 `content.json`，再重新載入 Portal。
+- Portal 只監聽 `127.0.0.1:5174`，不需要資料庫或登入；不要將本機 Portal 公開到網路。
+- API 僅在 `npm run portal` 啟動，不包含在正式網站打包裡。
+
+## 預覽與發布
+
+`npm run dev` 啟動一般網站預覽；`npm run build` 產生 `dist/`。
+
+**儲存只更新本機，公開網站需另外部署。** Portal 不會自動提交、推送 Git 或發布。依現有部署流程提交 `content.json` 和新圖片，再重新部署即可。
+
+執行 `npm run test:portal` 驗證資料檢查、衝突偵測、備份與上傳。
+
+## 中英文內容
+
+公開網站右上角提供「中文 / EN」切換，預設中文，並記住訪客的選擇。可分享 `?lang=en` 或 `?lang=zh` 網址。Portal 的「中文內容 / English content」切換編輯語言，預覽同步切換；管理介面維持中文。
+
+英文欄位 `profile.nameEn`、`profile.bioEn`、`links[].titleEn`、`banners[].imageAltEn`、`banners[].imageUrlEn` 皆可留空；留空時沿用中文。網址、排序、顯示狀態、頭像和主題共用。Banner 若已有英文圖片可共用，或在英文分頁上傳另一張圖片。新增項目請先填好中文必填欄位，再補英文。既有備份不含英文欄位也可正常讀取。
+
+## 連結分區標題
+
+在連結管理點「＋ 新增標題」，填入中文標題及選填英文翻譯。標題與連結在同一清單排序，顯示為不可點擊的文字與分隔線。可拖曳、上下移動、隱藏、刪除及復原。
+
+資料項目使用 `type: "heading"`，不需要網址或圖示；既有未填 `type` 的項目維持一般連結。隱藏標題只影響該標題，下方連結仍各自控制顯示。
+
+## 連結圖片
+
+每個一般連結可填「連結圖片網址（選填）」或上傳圖片。中文分頁管理 `links[].imageUrl`，英文分頁管理 `links[].imageUrlEn`。
+
+英文圖片網址留空（包括只有空格）時沿用中文圖片；兩者都沒有就不顯示圖片，也不保留空間。英文版可以單獨指定圖片；移除英文圖片後會回到中文圖片。
+
+圖片顯示在連結文字上方，整張卡片可點擊，依原始比例完整呈現。圖片載入失敗時隱藏，連結仍可點擊。既有連結不需要補填圖片欄位，分區標題不顯示圖片。移除圖片只清除引用，不會刪除已上傳的本地圖片檔。
+
+## 在 Portal 提交並推送
+
+先儲存內容，再點「提交並推送」。檢視視窗會查詢遠端、列出分支、檔案和待推送 commit，自動填入可修改的 commit 訊息。點「確認提交並推送」才會執行。首次更新請勾選「包含網站與 Portal 程式修改」，之後只更新內容可取消勾選。
+
+預設只提交 `content.json` 及內容引用到的本地圖片；勾選後才納入已列出的網站與 Portal 原始碼。不會納入 `.env`、本機備份或未引用的上傳圖片。使用既有 Git 身分和 origin，不儲存額外憑證。請先設定 Git user.name / user.email 及遠端登入。
+
+提交前會重新核對檔案、分支和遠端，執行打包與測試。已有暫存內容、合併衝突或遠端有未包含的提交時，會請你先在 Git 處理，不自動合併、不強制推送。檢視後若檔案改變，需重新檢視。
+
+推送失敗時保留本地 commit；重新檢視後可只重試推送，不會重複建立 commit。推送會包含清單列出的既有本地 commit。推送成功不等於部署完成，公開網站是否自動更新仍取決於既有部署設定。
